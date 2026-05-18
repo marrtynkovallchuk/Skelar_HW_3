@@ -1,0 +1,8 @@
+SELECT
+  match,
+  COUNT(*) AS users,
+  COUNT(date_first_payment) AS paid_users,
+  ROUND(COUNT(date_first_payment) / COUNT(*), 4) AS conversion_rate
+FROM `Skelar_Homework_3.Data`
+WHERE date_reminder IS NOT NULL
+GROUP BY match
