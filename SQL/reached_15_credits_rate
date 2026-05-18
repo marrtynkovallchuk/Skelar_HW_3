@@ -1,0 +1,7 @@
+SELECT
+  match,
+  COUNT(*) AS users,
+  COUNT(date_spent_15_credits) AS reached_15_credits,
+  ROUND(COUNT(date_spent_15_credits) / COUNT(*), 4) AS share_reached_15
+FROM `Skelar_Homework_3.Data`
+GROUP BY 1
