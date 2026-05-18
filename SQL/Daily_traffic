@@ -1,0 +1,6 @@
+SELECT
+  DATE(date_reg) AS day,
+  COUNT(*) AS users
+FROM `Skelar_Homework_3.Historical_data`
+GROUP BY day
+ORDER BY day
