@@ -1,0 +1,5 @@
+SELECT
+  COUNT(*) AS users,
+  COUNT(date_first_payment) AS paid_users,
+  COUNT(date_first_payment) / COUNT(*) AS baseline_cr
+FROM `Skelar_Homework_3.Historical_data`
