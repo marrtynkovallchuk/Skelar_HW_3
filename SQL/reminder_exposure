@@ -1,0 +1,7 @@
+SELECT
+  match,
+  COUNT(*) AS users,
+  COUNT(date_reminder) AS users_with_reminder,
+  ROUND(COUNT(date_reminder) / COUNT(*), 4) AS reminder_rate
+FROM `Skelar_Homework_3.Data`
+GROUP BY 1
